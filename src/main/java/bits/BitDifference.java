@@ -25,8 +25,8 @@ public class BitDifference {
     public static int countBitsFlipApproach1(int a, int b){
 
         // Your code here
-        List<Integer> bitsA=numberToBits(a);
-        List<Integer> bitsB=numberToBits(b);
+        List<Long> bitsA=numberToBits(a);
+        List<Long> bitsB=numberToBits(b);
         int i=0;
         int res=0;
         while(i<bitsA.size()&&i<bitsB.size()){
@@ -49,8 +49,8 @@ public class BitDifference {
         return res;
     }
 
-    static List<Integer> numberToBits(int n){
-        List<Integer> bits=new ArrayList<>();
+    static List<Long> numberToBits(long n){
+        List<Long> bits=new ArrayList<>();
         while(n>0){
             bits.add(n%2);
             n/=2;
